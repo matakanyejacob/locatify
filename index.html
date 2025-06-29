@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locatify - Discover Local Experiences</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Locatify</a>
+            <div class="nav-links">
+                <a href="#">Discover</a>
+                <a href="#">Cities</a>
+                <a href="#">About</a>
+                <a href="#" class="btn">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Hidden Gems Near You</h1>
+            <p>Find the best local experiences curated by your community</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location or interest...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map View Section -->
+    <section class="map-view">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore on Map</h2>
+                <button class="toggle-view">
+                    <i class="fas fa-list"></i> List View
+                </button>
+            </div>
+            <div class="map-container" id="main-map"></div>
+        </div>
+        <div class="search-bar">
+            <div class="search-input-container">
+                <input type="text" placeholder="Search for restaurants, shops, services..." id="search-input">
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            <button id="search-button"><i class="fas fa-search"></i> Search</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Locatify?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Local Discovery</h3>
+                    <p>Find unique places off the beaten path</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Powered</h3>
+                    <p>Real recommendations from real people</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Verified Reviews</h3>
+                    <p>Trustworthy ratings from local experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Locations Section -->
+    <section class="popular-locations">
+        <div class="container">
+            <h2>Popular Near You</h2>
+            <div class="location-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Restaurants</button>
+                <button class="filter-btn">Bars</button>
+                <button class="filter-btn">Shopping</button>
+                <button class="filter-btn">Services</button>
+            </div>
+            
+            <div class="business-grid">
+                <!-- Business Card 1 -->
+                <div class="business-card">
+                    <div class="business-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3');">
+                        <span class="bookmark"><i class="far fa-bookmark"></i></span>
+                    </div>
+                    <div class="business-info">
+                        <h3>The Rustic Spoon</h3>
+                        <div class="rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="review-count">248 reviews</span>
+                        </div>
+                        <div class="business-meta">
+                            <span class="price">$$</span>
+                            <span class="category">Italian</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> 1.2 mi</span>
+                        </div>
+                        <p class="snippet">"Best pasta downtown! Their carbonara is to die for."</p>
+                    </div>
+                </div>
+                
+                <!-- Business Card 2 -->
+                <div class="business-card">
+                    <div class="business-image" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3');">
+                        <span class="bookmark"><i class="far fa-bookmark"></i></span>
+                    </div>
+                    <div class="business-info">
+                        <h3>Green Leaf Spa</h3>
+                        <div class="rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="review-count">137 reviews</span>
+                        </div>
+                        <div class="business-meta">
+                            <span class="price">$$$</span>
+                            <span class="category">Spa</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> 0.8 mi</span>
+                        </div>
+                        <p class="snippet">"Most relaxing massage I've ever had. Will be back!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Locatify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

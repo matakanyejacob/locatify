@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rustic Spoon | Locatify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/business.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Locatify</a>
+            <div class="nav-links">
+                <a href="index.html">Discover</a>
+                <a href="#">Cities</a>
+                <a href="#">About</a>
+                <a href="#" class="btn">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Business Header -->
+    <section class="business-header">
+        <div class="container">
+            <div class="business-title">
+                <h1>The Rustic Spoon</h1>
+                <div class="rating-large">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="review-count">248 reviews</span>
+                    <span class="price">$$</span>
+                    <span class="category">Italian</span>
+                </div>
+            </div>
+            
+            <div class="business-actions">
+                <button class="action-btn"><i class="far fa-bookmark"></i> Save</button>
+                <button class="action-btn"><i class="fas fa-share-alt"></i> Share</button>
+                <button class="action-btn highlight"><i class="fas fa-pencil-alt"></i> Write a Review</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Business Gallery -->
+    <section class="business-gallery">
+        <div class="main-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3');"></div>
+        <div class="thumbnail-grid">
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?ixlib=rb-4.0.3');"></div>
+            <div class="thumbnail more">+12</div>
+        </div>
+    </section>
+    
+    <!-- Business Info Section -->
+    <section class="business-info-section">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Left Column -->
+                <div class="info-left">
+                    <div class="info-card">
+                        <h3>Location & Hours</h3>
+                        <p class="address">123 Main Street, Downtown</p>
+                        <div class="map-container" id="business-map"></div>
+                        <div class="hours">
+                            <div class="hour-row">
+                                <span class="day">Mon-Thu</span>
+                                <span class="time">11:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="hour-row">
+                                <span class="day">Fri-Sat</span>
+                                <span class="time">11:00 AM - 11:00 PM</span>
+                            </div>
+                            <div class="hour-row">
+                                <span class="day">Sunday</span>
+                                <span class="time">12:00 PM - 9:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Amenities</h3>
+                        <div class="amenities-grid">
+                            <div class="amenity">
+                                <i class="fas fa-wifi"></i>
+                                <span>Free Wi-Fi</span>
+                            </div>
+                            <div class="amenity">
+                                <i class="fas fa-wheelchair"></i>
+                                <span>Wheelchair Accessible</span>
+                            </div>
+                            <div class="amenity">
+                                <i class="fas fa-parking"></i>
+                                <span>Parking Available</span>
+                            </div>
+                            <div class="amenity">
+                                <i class="fas fa-utensils"></i>
+                                <span>Outdoor Seating</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>About the Business</h3>
+                        <p>Authentic Italian cuisine with a modern twist. Family-owned since 1998, we pride ourselves on using fresh, locally-sourced ingredients to create traditional dishes with contemporary flair.</p>
+                        <p class="owner-note"><strong>Owner's note:</strong> "We welcome you to experience the taste of Italy right here in the heart of the city."</p>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="info-right">
+                    <div class="info-card">
+                        <h3>Recommended Reviews</h3>
+                        <div class="review">
+                            <div class="reviewer">
+                                <div class="avatar" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+                                <div class="reviewer-info">
+                                    <h4>Sarah K.</h4>
+                                    <div class="user-stats">
+                                        <span><i class="fas fa-star"></i> 4.8</span>
+                                        <span>42 reviews</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="review-date">2 days ago</span>
+                                </div>
+                                <p class="review-text">"The food was excellent but the service was a bit slow. The tiramisu is the best I've had in the city!"</p>
+                                <div class="review-images">
+                                    <div class="review-image" style="background-image: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="see-all-reviews">See all 248 reviews</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Locatify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/business-map.js"></script>
+</body>
+</html>
